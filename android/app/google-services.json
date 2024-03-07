@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "372367270384",
+    "firebase_url": "https://makki-muslim-2.firebaseio.com",
+    "project_id": "makki-muslim-2",
+    "storage_bucket": "makki-muslim-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372367270384:android:83887077e3b68d7722fd35",
+        "android_client_info": {
+          "package_name": "com.e.makkimuslimsociety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372367270384-vjf1fd7jog54om3fd5rsbsovur3u819q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWhhfaFBTzqOYldcoTGn7J0mqXAmZXe5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372367270384-vjf1fd7jog54om3fd5rsbsovur3u819q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "372367270384-bmfihecu53mr268lje3p1pkn1802n472.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.Makki-Muslim-Society-Prayer-Times"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372367270384:android:a3d70fffe632376222fd35",
+        "android_client_info": {
+          "package_name": "com.example.makki_tv_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372367270384-vjf1fd7jog54om3fd5rsbsovur3u819q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWhhfaFBTzqOYldcoTGn7J0mqXAmZXe5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372367270384-vjf1fd7jog54om3fd5rsbsovur3u819q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "372367270384-bmfihecu53mr268lje3p1pkn1802n472.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.Makki-Muslim-Society-Prayer-Times"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

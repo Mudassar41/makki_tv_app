@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCnKKeeH8cTa8QSKgvA5pr6Kxuuw_C_IIo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>372367270384</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.makkiTvApp.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>makki-muslim-2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>makki-muslim-2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:372367270384:ios:85e98c71627173c322fd35</string>
+	<key>DATABASE_URL</key>
+	<string>https://makki-muslim-2.firebaseio.com</string>
+</dict>
+</plist>
