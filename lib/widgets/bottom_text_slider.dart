@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:makki_tv_app/app_colors.dart';
 
 class BottomTextsSliderItem extends StatefulWidget {
   const BottomTextsSliderItem({
@@ -40,8 +41,10 @@ class _BottomTextsSliderItemState extends State<BottomTextsSliderItem> {
           child: Text(
             widget.texts[index],
             style: GoogleFonts.montserrat(
-              fontSize: 28,
-              fontWeight: FontWeight.w600,
+              fontSize: 17,
+              
+              color:AppColors.secondary,
+              fontWeight: FontWeight.w500,
             ),
           ),
         );

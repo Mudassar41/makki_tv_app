@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:makki_tv_app/app_colors.dart';
 
 class TimeItem extends StatefulWidget {
   const TimeItem({Key? key}) : super(key: key);
@@ -26,7 +27,8 @@ class _TimeItemState extends State<TimeItem> {
     return Text(
       timeStarter,
       style: GoogleFonts.montserrat(
-        fontSize: 38,
+        fontSize: 16,
+        color: AppColors.secondaryLight,
         fontWeight: FontWeight.w700,
       ),
       // style: const TextStyle(

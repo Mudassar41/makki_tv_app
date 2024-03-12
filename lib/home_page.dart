@@ -20,125 +20,104 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          children: [
-            Expanded(
-              flex: 9,
-              child: Row(
-                children: [
-                  Expanded(
-                      flex: 2,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(10.0),
-                          ),
-                          border: Border.all(
-                            color: AppColors.primary,
-                          ),
-                        ),
-                        child: Column(
-                          children: [
-                            const SizedBox(height: 10),
-                            Container(
-                              padding: const EdgeInsets.all(10.0),
-                              decoration: const BoxDecoration(
-                                color: AppColors.primary,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(10),
-                                ),
-                              ),
-                              child: Column(
+      body: Column(
+        children: [
+          Expanded(
+            flex: 9,
+            child: Row(
+              children: [
+                Expanded(
+                    flex: 4,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
                                 children: [
-                                  CircleAvatar(
-                                    backgroundColor: Colors.white,
-                                    radius: 60,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                        left: 4,
-                                        right: 8,
-                                        top: 8,
-                                        bottom: 8,
-                                      ),
-                                      child: Image.asset(
-                                        'assets/images/app_icon.png',
-                                        fit: BoxFit.fitHeight,
-                                        height: 80,
-                                        width: double.infinity,
-                                        // fit: BoxFit.fitHeight,
-                                      ),
-                                    ),
+                                  Image.asset(
+                                    'assets/images/app_icon.png',
+                                    fit: BoxFit.cover,
+                                    height: 60,
+                            
+                                    // fit: BoxFit.fitHeight,
                                   ),
-                                  const SizedBox(height: 5),
-                                  Text(
-                                    'MAKKI MASJID & EDUCATION CENTRE',
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.white,
-                                      // color: Colors.white,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 20.0,
-                                      vertical: 10.0,
-                                    ),
-                                    decoration: const BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.all(
-                                        Radius.circular(10.0),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'MAKKI MASJID',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColors.secondaryLight,
+                                          //  color: Colors.white,
+                                        ),
                                       ),
-                                    ),
-                                    child: const Column(
-                                      children: [
-                                        DateShowItem(),
-                                        TimeItem(),
-                                      ],
-                                    ),
-                                  )
+                                      Text(
+                                        '& EDUCATION CENTRE',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w500,
+                                          color: AppColors.secondaryLight,
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ],
                               ),
-                            ),
-                            const Expanded(child: PrayersTimeItem()),
-                          ],
-                        ),
-                      )),
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                      ),
-                      child: const AnnouncementItem(
-                        images: [
-                          'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg',
-                          'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg'
+                              const Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  SizedBox(height: 10),
+                                  TimeItem(),
+                                  DateShowItem(),
+                                ],
+                              )
+                            ],
+                          ),
+                            
+                        const   SizedBox(height: 20),
+                          const Expanded(child: PrayersTimeItem()),
                         ],
                       ),
+                    )),
+                Expanded(
+                  flex: 5,
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 10,bottom: 6,right: 8),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10),
+                      ),
+                    ),
+                    child: const AnnouncementItem(
+                      images: [
+                        'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg',
+                        'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg'
+                      ],
                     ),
                   ),
-                ],
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              width: double.infinity,
+              child: BottomTextsSliderItem(
+                texts: AppConsts.marqueeText,
+                duration: const Duration(seconds: 5),
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: SizedBox(
-                width: double.infinity,
-                child: BottomTextsSliderItem(
-                  texts: AppConsts.marqueeText,
-                  duration: const Duration(seconds: 5),
-                ),
-              ),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
