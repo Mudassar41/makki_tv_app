@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:makki_tv_app/app_colors.dart';
 
 class TimeItem extends StatefulWidget {
-  const TimeItem({Key? key}) : super(key: key);
+  const TimeItem({super.key});
 
   @override
   State<TimeItem> createState() => _TimeItemState();

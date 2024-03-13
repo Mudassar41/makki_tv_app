@@ -96,10 +96,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     child: const AnnouncementItem(
-                      images: [
-                        'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg',
-                        'https://t4.ftcdn.net/jpg/04/26/04/61/360_F_426046170_Bshw7CccMbBLIFd9PCdLdKv3XRSkgFMh.jpg'
-                      ],
+
                     ),
                   ),
                 ),
@@ -109,7 +106,7 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             flex: 1,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               width: double.infinity,
               child: BottomTextsSliderItem(
                 texts: AppConsts.marqueeText,
