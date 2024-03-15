@@ -60,6 +60,6 @@ class FireStoreService {
   }
 
   static Future<void> delImgAnnouncement(String docID) async {
-    await textAnnRef.doc(docID).delete();
+    await imgAnnRef.doc(docID).delete();
   }
 }

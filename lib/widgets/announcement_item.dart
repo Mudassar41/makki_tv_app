@@ -40,13 +40,14 @@ class _AnnouncementItemState extends State<AnnouncementItem> {
                 return Container(
                   height: MediaQuery.sizeOf(context).height,
                   clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(
+                  decoration:  BoxDecoration(
+                    borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                     image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage("${data['url']}"),
+                     fit: BoxFit.fill,
+                    // image: AssetImage("assets/images/sample1.png")
+                     image: NetworkImage("${data['url']}"),
                     ),
                   ),
                 );

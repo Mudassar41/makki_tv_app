@@ -9,7 +9,7 @@ import 'package:makki_tv_app/widgets/prayers_time_item.dart';
 import 'package:makki_tv_app/widgets/time_item.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                                     'assets/images/app_icon.png',
                                     fit: BoxFit.cover,
                                     height: 60,
-                            
+
                                     // fit: BoxFit.fitHeight,
                                   ),
                                   Column(
@@ -80,8 +80,7 @@ class _HomePageState extends State<HomePage> {
                               )
                             ],
                           ),
-                            
-                        const   SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           const Expanded(child: PrayersTimeItem()),
                         ],
                       ),
@@ -89,15 +88,18 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    padding: const EdgeInsets.only(top: 10,bottom: 6,right: 8),
+                    padding: const EdgeInsets.only(
+                      top: 15,
+                      bottom: 6,
+                      right: 8,
+                      left: 15,
+                    ),
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(
                         Radius.circular(10),
                       ),
                     ),
-                    child: const AnnouncementItem(
-
-                    ),
+                    child: const AnnouncementItem(),
                   ),
                 ),
               ],

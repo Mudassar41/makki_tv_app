@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:makki_tv_app/admin/admin_home.dart';
 import 'package:makki_tv_app/firebase_options.dart';
 import 'package:makki_tv_app/home_page.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  WakelockPlus.enable();
   runApp(const MyApp());
 }
 

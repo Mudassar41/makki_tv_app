@@ -9,11 +9,12 @@ class DateShowItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      DateFormat('EEEE dd MMMM yyyy').format(DateTime.now()),
+      DateFormat('EEEE dd MMMM').format(DateTime.now()),
+      textAlign: TextAlign.right,
       style: GoogleFonts.montserrat(
         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                        color: AppColors.secondaryLight,
+        fontWeight: FontWeight.w500,
+        color: AppColors.secondaryLight,
       ),
     );
   }

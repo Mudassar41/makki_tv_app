@@ -44,7 +44,6 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
   @override
   void initState() {
     super.initState();
-
     fsDataLoad();
   }
 
@@ -66,15 +65,15 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
               isMainHeading: true,
               iconUrl: '',
               prayerName: '',
-              startTime: 'Start',
-              jamaatTime: 'Jamaat',
+              startTime: 'START',
+              jamaatTime: 'JAMAAT',
               iconColor: Colors.blueGrey,
               startColor: AppColors.secondary,
               jamaatColor: AppColors.secondary,
             ),
             PrayerItem(
               iconUrl: 'assets/images/fajr.svg',
-              prayerName: 'Fajr',
+              prayerName: 'FAJR',
               startTime: current.Fajr_Start,
               jamaatTime: current.Fajr_Jamaah,
               iconColor: Colors.blueGrey,
@@ -87,7 +86,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
             ),
             PrayerItem(
               iconUrl: 'assets/images/sun.svg',
-              prayerName: 'Dhuhr',
+              prayerName: 'DHUHR',
               startTime: current.Duhr_Start,
               jamaatTime: current.Duhr_Start,
               iconColor: const Color(0xffab9b4a),
@@ -100,9 +99,9 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
             ),
             PrayerItem(
               iconUrl: 'assets/images/sunset.svg',
-              prayerName: 'Asr',
-              startTime: '05:11',
-              jamaatTime: '05:12',
+              prayerName: 'ASR',
+              startTime: current.Asr_Start,
+              jamaatTime: current.Asr_Jamaah,
               iconColor: Colors.black26,
               startColor: current.Asr_Start == prev.Asr_Start
                   ? AppColors.secondary
@@ -113,7 +112,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
             ),
             PrayerItem(
               iconUrl: 'assets/images/maghrib.svg',
-              prayerName: 'Maghrib',
+              prayerName: 'MAGHRIB',
               startTime: current.Maghrib_Jamaah,
               jamaatTime: current.Maghrib_Jamaah,
               iconColor: Colors.black54,
@@ -124,7 +123,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
             ),
             PrayerItem(
               iconUrl: 'assets/images/isha.svg',
-              prayerName: "'Ishā",
+              prayerName: "'ISHA",
               startTime: current.Eisha_Start,
               jamaatTime: current.Eisha_Jamaah,
               iconColor: Colors.black54,
@@ -148,7 +147,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
                 Column(
                   children: [
                     Text(
-                      'Sehri End',
+                      'SEHRI END',
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
@@ -157,7 +156,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
                     ),
                     //   SizedBox(height: 5),
                     Text(
-                      current.Fajr_Jamaah,
+                      current.Subh_Sadiq,
                       style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w600,
                           fontSize: 14,
@@ -173,7 +172,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
                 Column(
                   children: [
                     Text(
-                      'Iftaar',
+                      'IFTAAR',
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
