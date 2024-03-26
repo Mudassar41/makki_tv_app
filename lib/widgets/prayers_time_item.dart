@@ -41,6 +41,11 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
   static String english = DateFormat('EEEE, dd MMM y').format(DateTime.now());
   String date = english;
 
+  ///
+  String timeStarter = DateFormat.Hms().format(DateTime.now());
+  late Timer timer1;
+
+  ///
   @override
   void initState() {
     super.initState();
@@ -88,7 +93,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
               iconUrl: 'assets/images/sun.svg',
               prayerName: 'DHUHR',
               startTime: current.Duhr_Start,
-              jamaatTime: current.Duhr_Start,
+              jamaatTime: current.Duhr_Jamaah,
               iconColor: const Color(0xffab9b4a),
               startColor: current.Duhr_Start == prev.Duhr_Start
                   ? AppColors.secondary
@@ -241,7 +246,7 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
         });
         if (_shiftStart == false) {
           GetTodays();
-          // start_timer();
+          startTimer();
           change_times();
           _shiftStart = true;
         }
@@ -249,6 +254,22 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
     } catch (e) {
       print(e);
     }
+  }
+
+  void startTimer() {
+    timer = Timer.periodic(const Duration(seconds: 1), (time) {
+      final currentTime = DateTime.now();
+      final formattedTime = DateFormat.Hms().format(currentTime);
+      if (mounted) {
+        setState(() {
+          timeStarter = formattedTime;
+        });
+      }
+
+      if (formattedTime == '12:00:00 AM') {
+        fsDataLoad();
+      }
+    });
   }
 
   GetTodays() {
@@ -282,6 +303,13 @@ class _PrayersTimeItemState extends State<PrayersTimeItem> {
       }
       j++;
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    timer1.cancel();
+    timer.cancel();
   }
 }
 

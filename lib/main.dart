@@ -1,4 +1,7 @@
+import 'dart:io' show Platform;
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 import 'package:makki_tv_app/admin/admin_home.dart';
 import 'package:makki_tv_app/firebase_options.dart';
@@ -7,9 +10,14 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // Firestore.initialize("makki-muslim-2");
+  // if (Platform.isWindows) {
+  //
+  // } else {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+ // }
   WakelockPlus.enable();
   runApp(const MyApp());
 }

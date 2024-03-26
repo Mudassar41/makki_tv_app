@@ -36,18 +36,17 @@ class _AnnouncementItemState extends State<AnnouncementItem> {
               ...snapshot.data!.docs.map((DocumentSnapshot document) {
                 Map<String, dynamic> data =
                     document.data()! as Map<String, dynamic>;
-                print(data);
                 return Container(
                   height: MediaQuery.sizeOf(context).height,
                   clipBehavior: Clip.antiAlias,
-                  decoration:  BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(10),
                     ),
                     image: DecorationImage(
-                     fit: BoxFit.fill,
-                    // image: AssetImage("assets/images/sample1.png")
-                     image: NetworkImage("${data['url']}"),
+                      fit: BoxFit.fill,
+                      // image: AssetImage("assets/images/sample1.png")
+                      image: NetworkImage("${data['url']}"),
                     ),
                   ),
                 );
